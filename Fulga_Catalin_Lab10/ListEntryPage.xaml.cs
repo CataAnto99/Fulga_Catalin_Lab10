@@ -20,6 +20,7 @@ namespace Fulga_Catalin_Lab10
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+            var shopl = (ShopList)BindingContext;
             listView.ItemsSource = await App.Database.GetShopListsAsync();
         }
         async void OnShopListAddedClicked(object sender, EventArgs e)
